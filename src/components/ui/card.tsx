@@ -1,9 +1,9 @@
 import { observer } from "mobx-react";
-import React from "react";
 
 export interface CardUiProps {
   title: string;
 }
+
 
 const CardUi: React.FC<CardUiProps> = observer(({ title }) => {
   return (

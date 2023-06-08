@@ -1,9 +1,9 @@
 import { observer } from "mobx-react";
-import React from "react";
 
 export interface LayOutComponentProps {
   children: React.ReactNode;
 }
+
 
 const LayOutComponent: React.FC<LayOutComponentProps> = observer(
   ({ children }) => {
