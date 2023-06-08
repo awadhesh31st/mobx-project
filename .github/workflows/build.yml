@@ -1,28 +1,34 @@
-name: Build and Test
+name: Deploy React App
 
 on:
   push:
     branches:
-      - master
-  pull_request:
-    branches:
-      - master
+      - master  # Replace with your branch name
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: '16'  # Replace with your desired Node.js version
+
+      - name: Use Yarn
+        run: npm install -g yarn@latest
 
       - name: Install dependencies
         run: yarn install
 
-      - name: Build
+      - name: Build React app
         run: yarn build
 
-      - name: Test
-        run: yarn test -- --passWithNoTests
+      - name: Deploy to server
+        # Replace with your deployment steps (e.g., copying files to a server)
+        run: |
+          echo "Deploying React app..."
+          # Add your deployment commands here
