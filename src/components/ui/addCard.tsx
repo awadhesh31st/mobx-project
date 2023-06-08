@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import { FaPlusSquare } from "react-icons/fa";
 import homeStore from "../../store/homeStore";
 import { quotes } from "../../lib";
+import { observer } from "mobx-react";
 
-const AddCardComponent = () => {
+const AddCardComponent = observer(() => {
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
@@ -27,6 +28,7 @@ const AddCardComponent = () => {
       <img
         src={`https://picsum.photos/200`}
         className="relative z-0 block h-[150%] min-w-full object-cover"
+        alt="add"
       />
       <div className="absolute left-0 right-0 top-0 bottom-0 z-[1] text-white bg-gradient-to-b from-zinc-400 to-slate-900 opacity-60">
         <div className="h-52 flex justify-center items-center">
@@ -35,6 +37,6 @@ const AddCardComponent = () => {
       </div>
     </div>
   );
-};
+});
 
 export default AddCardComponent;
