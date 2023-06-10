@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { FaPlusSquare } from "react-icons/fa";
-import homeStore from "../../store/homeStore";
-import { quotes } from "../../lib";
 import { observer } from "mobx-react";
+import { quotes } from "../../../../lib";
+import homeStore from "../../../pages/landing/store";
 
 const AddCardComponent = observer(() => {
   const [count, setCount] = useState<number>(0);

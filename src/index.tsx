@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
-import HomeComponent from "./components/home";
+import HomeComponent from "./components/pages/landing";
 
 import "../src/styles/index.css";
 

@@ -1,5 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { CardUiProps } from "../components/ui/card";
+import { CardUiProps } from "../../common/ui/card/type";
 
 const updateCardList = (
   cardList: CardUiProps[],
@@ -8,10 +8,7 @@ const updateCardList = (
 
 class HomeStore {
   homeTitle: string = "Welcome to home page";
-  cardList: CardUiProps[] = [
-    { title: "Dream big, achieve bigger" },
-    { title: "Love conquers all, always" },
-  ];
+  cardList: CardUiProps[] = [{ title: "Dream big, achieve bigger" }];
   newCard: string = "";
 
   constructor() {

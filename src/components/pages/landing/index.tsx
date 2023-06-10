@@ -1,9 +1,9 @@
 import React from "react";
 import { observer } from "mobx-react";
-import LayOutComponent from "./common/LayOut";
-import CardUi from "./ui/card";
-import homeStore from "../store/homeStore";
-import AddCardComponent from "./ui/addCard";
+import LayOutComponent from "../../common/layout/LayOut";
+import homeStore from "./store";
+import CardUi from "../../common/ui/card";
+import AddCardComponent from "../../common/ui/card/addCard";
 
 const HomeComponent = observer(() => {
   return (
